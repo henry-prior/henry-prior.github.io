@@ -3,7 +3,7 @@ author: henry prior
 email: henry-prior@cims.nyu.edu
 url: https://henry-prior.github.io
 description: > # description of the site (multiple lines allowed)
-  machine learning engineer. interested in reinforcement learning, probability, and games.
+  machine learning engineer. interested in probability, reinforcement learning, and games.
 
 permalink: /:slug.html
 
