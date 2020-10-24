@@ -5,15 +5,17 @@ entries:
   - title: info
     url: false
     entries:
-      - title: more about me 
+      - title: more about me, reach out! 
         url: false
       - title: github
         url: https://github.com/henry-prior
+      - title: henry-prior@cims.nyu.edu
+        url: false
 
   - title: thoughts
     post_list: true
     url: false
-    entries: false
+    entries: true
 
   - title: rss
     url: feed.xml
