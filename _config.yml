@@ -12,7 +12,14 @@ favicon: "./logo.png" # relative path to site's favicon
 
 remote_theme: riggraz/no-style-please # if you are using GitHub Pages, change it to remote_theme: riggraz/no-style-please
 
-highlighter: css/autumn.css
+markdown: kramdown
+kramdown:
+  syntax_highlighter: rouge
+  input: GFM
+  syntax_highlighter_opts:
+    default_lang: python
+    css_class: 'syntax'
+
 
 theme_config:
   appearance: "auto" # can be "light", "dark" or "auto"
