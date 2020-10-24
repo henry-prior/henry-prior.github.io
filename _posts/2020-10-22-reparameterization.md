@@ -1,6 +1,6 @@
 # Reparameterization
 
-As an exercise to deepen my understanding of reinforcement learning I decided to implement a few common algorithms in JAX. In hindsight, this was a great choice for a project. The current JAX ecosystem, while thriving, is still bare-bones compared to frameworks such as TensorFlow and PyTorch. This means that many of the common conveneinces that I take for granted were removed. Engineering decisions and considersations are sometimes as important as the theory, and almost always the ease of implementation plays into the mainstream success of an algorithm or method. The reparameterization trick was one such consideration which came up over the course of this projecte. I had read about it previously, and digested the general idea, but I believe that most articles covering the topic don't cover a simple intuition I'd like to discuss.
+As an exercise to deepen my understanding of reinforcement learning I decided to implement a few common algorithms in JAX. The current JAX ecosystem, while thriving, is still bare-bones compared to frameworks such as TensorFlow and PyTorch. This means that many of the common conveniences that I take for granted were removed. Engineering decisions and considerations are sometimes as important as the theory, and almost always the ease of implementation plays into the mainstream success of an algorithm or method. The reparameterization trick was one such consideration which came up over the course of this projecte. I had read about it previously, and digested the general idea, but I believe that most articles covering the topic don't cover a simple intuition I'd like to discuss.
 
 ### The Problem
 
@@ -25,5 +25,6 @@ How to reparameterize:
 ```python
 action = mu + np.random.normal() * sigma 
 ```
+
 
 
