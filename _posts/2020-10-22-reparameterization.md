@@ -15,11 +15,9 @@ So, how do we restore our ability to do backpropogation? Well, if we're using Te
 
 How we would naively think to do things:
 
-```python
+{% highlight python %}
 action = np.random.normal(mu, sigma)
-def test():
-    pass
-```
+{% endhighlight %}
 
 How to reparameterize:
 
