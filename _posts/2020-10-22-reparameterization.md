@@ -1,4 +1,3 @@
-# Reparameterization
 
 As an exercise to deepen my understanding of reinforcement learning I decided to implement a few common algorithms in JAX. The current JAX ecosystem, while thriving, is still bare-bones compared to frameworks such as TensorFlow and PyTorch. This means that many of the common conveniences that I take for granted were removed. Engineering decisions and considerations are sometimes as important as the theory, and almost always the ease of implementation plays into the mainstream success of an algorithm or method. The reparameterization trick was one such consideration which came up over the course of this projecte. I had read about it previously, and digested the general idea, but I believe that most articles covering the topic don't cover a simple intuition I'd like to discuss.
 
@@ -14,10 +13,12 @@ This might seem simple enough; we can build a network with two outputs, one for 
 
 So, how do we restore our ability to do backpropogation? Well, if we're using TensorFlow or PyTorch each have great modules for probability distributions which take care of this for us. But we're using JAX! As many answers online suggest, we need to change where the randomness is coming from, but what does this mean in practice? In the case of a Gaussian distribution, it's astonishingly simple. Instead of sampling from the distribution paramerized by our network outputs, we can instead sample a "z-score" from a separate N(0, 1) and construct our desired sample from this value.
 
-How we would niavely think to do things:
+How we would naively think to do things:
 
 ```python
 action = np.random.normal(mu, sigma)
+def test():
+    pass
 ```
 
 How to reparameterize:
