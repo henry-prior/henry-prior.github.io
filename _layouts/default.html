@@ -3,6 +3,7 @@
         {%- include head.html -%}
     <body a="{{ site.theme_config.appearance | default: "auto" }}">
     <main class="page-content" aria-label="Content">
+    <link href="{{ site.baseurl }}/assets/css/autumn.css" rel="stylesheet">
         <div class="w">
             {{ content }}
         </div>
@@ -14,4 +15,3 @@
     </body>
 </html>
 
-<link href="{{ site.baseurl }}/css/autumn.css" rel="stylesheet">
