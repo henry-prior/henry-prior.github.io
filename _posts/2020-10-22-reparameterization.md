@@ -13,12 +13,16 @@ This might seem simple enough; we can build a network with two outputs, one for 
 
 So, how do we restore our ability to do backpropogation? Well, if we're using TensorFlow or PyTorch each have great modules for probability distributions which take care of this for us. But we're using JAX! As many answers online suggest, we need to change where the randomness is coming from, but what does this mean in practice? In the case of a Gaussian distribution, it's astonishingly simple. Instead of sampling from the distribution parameterized by our network outputs, we can instead sample a "z-score" from a separate N(0, 1) and construct our desired sample from this value.
 
+<div class="myvideo">
+   <video  style="display:block; width:100%; height:auto;" autoplay controls loop="loop">
+       <source src="{{ site.baseurl }}/media/2020-10-22-reparameterization/Gauss.mp4" type="video/mp4" />
+   </video>
+</div>
+
 How we would naively think to do things:
 
 ```python
 action = np.random.normal(mu, sigma)
-def test():
-    pass
 ```
 
 How to reparameterize:
